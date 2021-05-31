@@ -1,0 +1,2 @@
+class Travelbug < ApplicationRecord
+end
