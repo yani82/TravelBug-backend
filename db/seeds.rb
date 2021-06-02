@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Shalom = User.create(name: "Shalom", email: "shalom@example.com")
+Dana = User.create(name: "Dana", email: "dana@example.com") 
+Wayne = User.create(name: "Wayne", email: "wayne@example.com") 
+Daniel = User.create(name: "Daniel", email: "daniel@example.com") 
+Cinna = User.create(name: "Cinna", email: "cinna@example.com") 
+
 Travelbug.create([
     { body: 'Malaysia is currently in their fourth-wave, and are in a full lockdown for 10 days. All travellers must undergo a mandatory 14-day quarantine at quarantine centres.'},
     { body: 'All travellers to Italy could be subject to self-isolation for 10 days and to a COVID-19 antigen or molecular test at the end of self-isolation.'},
