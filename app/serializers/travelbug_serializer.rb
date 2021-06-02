@@ -1,3 +1,4 @@
 class TravelbugSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :body, :user_name
+  # belongs_to :user 
 end
