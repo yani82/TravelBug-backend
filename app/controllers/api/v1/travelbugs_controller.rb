@@ -2,26 +2,26 @@ class Api::V1::TravelbugsController < ApplicationController
     def index 
         travelbugs = Travelbug.all 
 
-        render json: travelbugs, status: 200 
+        render json: travelbugs 
     end 
 
     def show 
         travelbug = Travelbug.find(params[:id])
 
-        render json: travelbug, status: 200 
+        render json: travelbug
     end 
 
     def create 
         travelbug = Travelbug.create(travelbug_params)
 
-        render json: travelbug, status: 200
+        render json: travelbug
     end 
 
     def update 
         travelbug = Travelbug.find(params[:id])
         travelbug.update(travelbug_params)
 
-        render json: travelbug, status: 200
+        render json: travelbug
     end 
 
     def destroy
