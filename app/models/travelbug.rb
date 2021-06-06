@@ -1,5 +1,5 @@
 class Travelbug < ApplicationRecord
-    belongs_to :user
+    belongs_to :country
 
     def format_user
           {
