@@ -3,9 +3,11 @@ class Travelbug < ApplicationRecord
 
     def format_user
           {
-            name: self.user.name, 
-            email: self.user.email, 
-            id: self.user.id 
+            id: self.id, 
+            body: self.body
+            # name: self.user.name, 
+            # email: self.user.email, 
+            # id: self.user.id 
           } 
         end  
 end
