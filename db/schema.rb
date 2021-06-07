@@ -16,18 +16,22 @@ ActiveRecord::Schema.define(version: 2021_06_06_060329) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "country_id"
+    t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "countries", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "travelbugs", force: :cascade do |t|
     t.string "body"
-    t.integer "user_id"
+    t.integer "country_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
