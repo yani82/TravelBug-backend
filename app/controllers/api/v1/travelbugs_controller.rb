@@ -13,8 +13,12 @@ class Api::V1::TravelbugsController < ApplicationController
 
     def create 
         travelbug = Travelbug.create(travelbug_params)
+        # if travelbug.save
 
         render json: travelbug
+        # else 
+        # here is where we would render a json error object 
+        # end
     end 
 
     def update 
