@@ -14,6 +14,7 @@ class Api::V1::TravelbugsController < ApplicationController
     def create 
         travelbug = Travelbug.create(travelbug_params)
         # if travelbug.save
+        binding.pry
 
         render json: travelbug
         # else 

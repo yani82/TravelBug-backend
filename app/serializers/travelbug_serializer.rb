@@ -1,5 +1,5 @@
 class TravelbugSerializer < ActiveModel::Serializer
-  attributes :id, :body, :format_country
+  attributes :id, :body, :format_country, :comments 
    belongs_to :format_country, except: [:created_at, :updated_at] 
 
   # def user
