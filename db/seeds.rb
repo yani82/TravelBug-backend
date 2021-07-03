@@ -28,4 +28,20 @@ Travelbug.create([
     { country_id: 5,body: 'All travellers are not allowed to enter Portugal, except if they are nationals and their immediate family members as well as other terms.'}
     ])
 
+Comment.create([
+        { user_id: 1, country_id: 1, body: 'After our 10-day quarantine, we were able to explore Kuala Lumpur a little bit. The quarantine center was actually a five-star hotel.'},
+        { user_id: 2, country_id: 2, body: 'We were able to self-isolate where we were booked or with relatives for the whole 10-day quarantine, and spend some quality time with them before exploring.'},
+        { user_id: 3, country_id: 3, body: 'They are very strict here with their travel restrictions.'},
+        { user_id: 4, country_id: 4, body: 'Unfortunately, due to the delta variant, they had to be on lock down again for a couple of weeks.'},
+        { user_id: 5, country_id: 5, body: 'Since their numbers are under control, we were able to visit with minimal restrictions.'} 
+        ])  
+
+User.create([
+        { name: 'Shalom'},
+        { name: 'Wayne'},
+        { name: 'Dana'},
+        { name: 'Daniel'},
+        { name: 'Cinna'} 
+        ])  
+
      
