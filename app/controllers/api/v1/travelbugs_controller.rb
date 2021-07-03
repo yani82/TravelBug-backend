@@ -2,7 +2,7 @@ class Api::V1::TravelbugsController < ApplicationController
     def index 
         travelbugs = Travelbug.all 
 
-        render json: travelbugs 
+        render json: travelbugs
     end 
 
     def show 
