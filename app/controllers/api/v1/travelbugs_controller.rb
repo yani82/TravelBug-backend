@@ -13,13 +13,13 @@ class Api::V1::TravelbugsController < ApplicationController
 
     def create 
         travelbug = Travelbug.create(travelbug_params)
-        # if travelbug.save
-        binding.pry
-
-        render json: travelbug
-        # else 
+        if travelbug.save
+        # binding.pry
+            render json: travelbug, status: :accepted
+        else 
         # here is where we would render a json error object 
-        # end
+            render json: {errors: @travelbug.errors.full_messages}, status: :unprocessible_entity 
+        end
     end 
 
     def update 
@@ -37,7 +37,8 @@ class Api::V1::TravelbugsController < ApplicationController
     end 
 
     private 
+
         def travelbug_params 
-            params.require(:travelbug).permit(:body)
+            params.require(:travelbug).permit(:body, :country_id)
         end 
 end
