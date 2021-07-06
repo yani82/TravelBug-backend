@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Shalom = User.create(name: "Shalom", email: "shalom@example.com")
-# Dana = User.create(name: "Dana", email: "dana@example.com") 
-# Wayne = User.create(name: "Wayne", email: "wayne@example.com") 
-# Daniel = User.create(name: "Daniel", email: "daniel@example.com") 
-# Cinna = User.create(name: "Cinna", email: "cinna@example.com") 
+Shalom = User.create(name: "Shalom", email: "shalom@example.com")
+Dana = User.create(name: "Dana", email: "dana@example.com") 
+Wayne = User.create(name: "Wayne", email: "wayne@example.com") 
+Daniel = User.create(name: "Daniel", email: "daniel@example.com") 
+Cinna = User.create(name: "Cinna", email: "cinna@example.com") 
 
 Country.create([
         { name: 'Malaysia'},
@@ -35,13 +35,4 @@ Comment.create([
         { user_id: 4, country_id: 4, body: 'Unfortunately, due to the delta variant, they had to be on lock down again for a couple of weeks.'},
         { user_id: 5, country_id: 5, body: 'Since their numbers are under control, we were able to visit with minimal restrictions.'} 
         ])  
-
-User.create([
-        { name: 'Shalom'},
-        { name: 'Wayne'},
-        { name: 'Dana'},
-        { name: 'Daniel'},
-        { name: 'Cinna'} 
-        ])  
-
      

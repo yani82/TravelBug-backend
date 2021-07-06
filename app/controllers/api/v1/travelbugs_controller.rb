@@ -1,8 +1,11 @@
 class Api::V1::TravelbugsController < ApplicationController
     def index 
         travelbugs = Travelbug.all 
-
-        render json: travelbugs
+        options = {
+        include: [:country] 
+        }
+        # render json: travelbugs? 
+        render json: TravelbugSerializer.new(travelbugs, options)
     end 
 
     def show 
@@ -14,7 +17,7 @@ class Api::V1::TravelbugsController < ApplicationController
     def create 
         travelbug = Travelbug.create(travelbug_params)
         if travelbug.save
-        # binding.pry
+
             render json: travelbug, status: :accepted
         else 
         # here is where we would render a json error object 
