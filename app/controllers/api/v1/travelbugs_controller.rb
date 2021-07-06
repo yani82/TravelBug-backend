@@ -1,11 +1,12 @@
 class Api::V1::TravelbugsController < ApplicationController
     def index 
         travelbugs = Travelbug.all 
-        options = {
-        include: [:country] 
-        }
-        # render json: travelbugs? 
-        render json: TravelbugSerializer.new(travelbugs, options)
+        # options = {
+        # include: [:country] 
+        # }
+        render json: travelbugs
+        # render json: TravelbugSerializer.new(travelbugs)
+        # , options)
     end 
 
     def show 
