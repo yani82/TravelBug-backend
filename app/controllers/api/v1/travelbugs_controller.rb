@@ -10,7 +10,8 @@ class Api::V1::TravelbugsController < ApplicationController
         render json: travelbug
     end 
 
-    def create 
+    def create
+        byebug  
         travelbug = Travelbug.create(travelbug_params)
         if travelbug.save
 
@@ -38,6 +39,6 @@ class Api::V1::TravelbugsController < ApplicationController
     private 
 
         def travelbug_params 
-            params.require(:travelbug).permit(:body, :country_id)
+            params.require(:travelbug).permit(:country_id, :description, :username)
         end 
 end

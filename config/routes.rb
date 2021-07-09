@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do 
 
-      resources :travelbugs, only: [:index, :show, :create, :update, :destroy] 
-      resources :users, only: [:index] 
-      resources :countries, only: [:index] 
-      resources :comments, only: [:index] 
+      resources :travelbugs
+      resources :users
+      resources :countries
+      resources :comments
     end 
   end 
 end
